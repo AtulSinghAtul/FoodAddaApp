@@ -4,6 +4,7 @@ import { RES_IMG_URL } from "../utility/constant";
 const resCard = ({ resList }) => {
   const { name, avgRating, sla, locality, cloudinaryImageId, cuisines } =
     resList?.info;
+  // console.log(id);
   return (
     <div>
       <div className="w-[300px] h-[400px] border border-gray-600 mt-12 rounded-lg">

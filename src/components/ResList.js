@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { RES_LIST_URL } from "../utility/constant";
 import useFetchlist from "../hooks/useFetchlist";
 import { useSelector } from "react-redux";
+import ResListCard from "./ResListCard";
 
 const ResList = () => {
-  useFetchlist(RES_LIST_URL);
-  const resList = useSelector((store) => store.app.resListData);
+  // const [data, setData] = useState();
 
-  console.log(resList);
+  useFetchlist(RES_LIST_URL);
+
+  const resList = useSelector((store) => store?.app?.resListData);
 
   console.log("res list");
-  return <div className="text-4xl font-bold">ResList</div>;
+  return resList === null ? (
+    <h1>Loading...</h1>
+  ) : (
+    <div className=" mt-8">
+      {resList[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.map((card) => (
+        <ResListCard key={card?.card?.card?.title} resListCard={card} />
+      ))}
+    </div>
+  );
 };
 
 export default ResList;

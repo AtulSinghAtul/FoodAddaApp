@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [online, setOnline] = useState("🟢");
@@ -8,11 +9,13 @@ const Header = () => {
     <div className="w-[100vw] h-fit">
       <header className="py-4 w-full h-full  px-5 flex justify-between items-center shadow-md">
         <div className="grid-cols-1">
-          <img
-            src={require("../assets/res-logo.jpeg")}
-            alt="res-logo"
-            className="w-20 "
-          />
+          <Link to="/">
+            <img
+              src={require("../assets/res-logo.jpeg")}
+              alt="res-logo"
+              className="w-20 "
+            />
+          </Link>
         </div>
 
         <div>status: {online}</div>
