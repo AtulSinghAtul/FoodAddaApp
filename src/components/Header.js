@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnline from "../hooks/useOnline";
 
 const Header = () => {
-  const [online, setOnline] = useState("🟢");
+  // const [online, setOnline] = useState("🟢");
+  const online = useOnline();
+  console.log(online);
   const [login, setLogin] = useState(true);
 
   return (
@@ -18,11 +21,18 @@ const Header = () => {
           </Link>
         </div>
 
-        <div>status: {online}</div>
+        <div>status: {online ? "🟢" : "🔴"}</div>
 
         <ul className="flex justify-between items-center gap-4 text-xl font-semibold">
-          <li>Offers</li>
-          <li>Help</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
           <li>Atul Singh</li>
           <li>Cart</li>
         </ul>
