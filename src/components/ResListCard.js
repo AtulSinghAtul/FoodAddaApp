@@ -4,7 +4,7 @@ import ItemsList from "./ItemsList";
 const ResListCard = ({ resListCard, resName }) => {
   const { title, itemCards, categories } = resListCard?.card?.card;
 
-  console.log(resListCard);
+  // console.log(resListCard);
   return (
     <div className="w-7/12">
       {title && (

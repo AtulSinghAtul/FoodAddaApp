@@ -12,7 +12,7 @@ const ResList = () => {
 
   const resList = useSelector((store) => store?.app?.resListData);
 
-  console.log(resList);
+  // console.log(resList);
   return resList === null ? (
     <Shimmer />
   ) : (

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const useOnline = () => {
   const [online, setOnline] = useState(false);
-  console.log("befor", online);
+  // console.log("befor", online);
 
   window.addEventListener("load", () => {
     setOnline(navigator.onLine);
@@ -15,7 +15,7 @@ const useOnline = () => {
     setOnline(false);
   });
 
-  console.log("after", online);
+  // console.log("after", online);
 
   return online;
 };

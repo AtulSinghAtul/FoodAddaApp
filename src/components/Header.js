@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../hooks/useOnline";
+import { useSelector } from "react-redux";
 
 const Header = () => {
-  // const [online, setOnline] = useState("🟢");
   const online = useOnline();
-  console.log(online);
+  // console.log(online);
   const [login, setLogin] = useState(true);
+  const cartData = useSelector((store) => store.cart.cartData);
+  console.log(cartData);
+  console.log(cartData.length);
 
   return (
     <div className="w-[100vw] h-fit">
@@ -34,7 +37,9 @@ const Header = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li>Atul Singh</li>
-          <li>Cart</li>
+          <li>
+            <Link to={"/cart"}>Cart({cartData.length})</Link>
+          </li>
         </ul>
         <button
           onClick={() => setLogin(!login)}

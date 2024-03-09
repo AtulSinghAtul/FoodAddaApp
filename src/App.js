@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import ResList from "./components/ResList";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Cart from "./components/Cart";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/" element={<Body />} />
         <Route path={"/about"} element={<About />} />
         <Route path={"/contact"} element={<Contact />} />
+        <Route path={"/cart"} element={<Cart />} />
 
         <Route path={"/reslist/:resId"} element={<ResList />} />
       </Routes>
