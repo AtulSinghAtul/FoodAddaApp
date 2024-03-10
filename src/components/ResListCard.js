@@ -15,7 +15,7 @@ const ResListCard = ({ resListCard, resName }) => {
           {itemCards?.map((item) => (
             <div className="flex justify-center items-center border border-t-2 mt-4">
               {" "}
-              <ItemsList key={item?.card?.info?.id} item={item} />
+              <ItemsList key={item?.card?.info?.id} item={item?.card?.info} />
             </div>
           ))}
 
@@ -28,7 +28,10 @@ const ResListCard = ({ resListCard, resName }) => {
 
               {item?.itemCards?.map((itemCard) => (
                 <div className="flex justify-center items-center border border-t-2 mt-4">
-                  <ItemsList key={itemCard?.card?.info?.id} item={itemCard} />{" "}
+                  <ItemsList
+                    key={itemCard?.card?.info?.id}
+                    item={itemCard?.card?.info}
+                  />{" "}
                 </div>
               ))}
             </div>

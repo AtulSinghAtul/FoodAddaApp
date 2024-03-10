@@ -5,13 +5,16 @@ import { addCartData } from "../slices/cartSlice";
 
 const ItemsList = ({ item }) => {
   const dispatch = useDispatch();
+  console.log(item);
 
-  const { ratings, name, price, description, defaultPrice, imageId } =
-    item?.card?.info;
+  // const { ratings, name, price, description, defaultPrice, imageId } =
+  //   item?.card?.info;
+
+  const { ratings, name, price, description, defaultPrice, imageId } = item;
 
   function handleAdd() {
     console.log("click");
-    dispatch(addCartData(item?.card?.info));
+    dispatch(addCartData(item));
   }
   return (
     <div className="font-normal text-2xl  my-2  p-8  flex justify-center items-center w-full">
@@ -36,7 +39,7 @@ const ItemsList = ({ item }) => {
           alt="item-img"
         />
         <button
-          className="absolute bg-slate-300 text-slate-600 px-4 py-1 text-sm font-semibold rounded-md -bottom-3 left-6 "
+          className="absolute bg-green-300 text-green-700 px-4 py-1 text-sm font-semibold rounded-md -bottom-3 left-6 "
           onClick={handleAdd}
         >
           Add +

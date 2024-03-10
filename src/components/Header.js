@@ -8,11 +8,12 @@ const Header = () => {
   // console.log(online);
   const [login, setLogin] = useState(true);
   const cartData = useSelector((store) => store.cart.cartData);
-  console.log(cartData);
-  console.log(cartData.length);
+
+  // console.log(cartData);
+  // console.log(cartData.length);
 
   return (
-    <div className="w-[100vw] h-fit">
+    <div className="w-[100vw] h-fit fixed top-0 left-0 bg-slate-50 z-30">
       <header className="py-4 w-full h-full  px-5 flex justify-between items-center shadow-md">
         <div className="grid-cols-1">
           <Link to="/">
