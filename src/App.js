@@ -4,7 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import ResList from "./components/ResList";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import Cart from "./components/Cart";
+import { Suspense, lazy } from "react";
+
+const Cart = lazy(() => import("./components/Cart"));
 
 const App = () => {
   return (
@@ -12,9 +14,17 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Body />} />
+
         <Route path={"/about"} element={<About />} />
         <Route path={"/contact"} element={<Contact />} />
-        <Route path={"/cart"} element={<Cart />} />
+        <Route
+          path={"/cart"}
+          element={
+            <Suspense fallback={"Loading...."}>
+              <Cart />
+            </Suspense>
+          }
+        />
 
         <Route path={"/reslist/:resId"} element={<ResList />} />
       </Routes>

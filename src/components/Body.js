@@ -53,7 +53,7 @@ const Body = () => {
   ) : (
     <div className="flex flex-col justify-start items-center w-full h-full mt-8 px-12">
       <Outlet />
-      <div className="w-full text-center ">
+      <div className="w-full text-center mt-36">
         <input
           type="text"
           className="bg-gray-400 w-[50%] text-white rounded-md px-12 py-4 outline-none placeholder:text-white text-center text-xl"

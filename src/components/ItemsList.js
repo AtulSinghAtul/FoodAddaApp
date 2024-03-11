@@ -5,7 +5,7 @@ import { addCartData } from "../slices/cartSlice";
 
 const ItemsList = ({ item }) => {
   const dispatch = useDispatch();
-  console.log(item);
+  // console.log(item);
 
   // const { ratings, name, price, description, defaultPrice, imageId } =
   //   item?.card?.info;

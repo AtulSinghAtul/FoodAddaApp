@@ -31,4 +31,21 @@ const resCard = ({ resList }) => {
   );
 };
 
+//! HOF - hof is take a component in input and retur a enhanced component
+
+export const resCardPrice = (ResCard) => {
+  return ({ resList }) => {
+    // console.log(resList);
+    const { costForTwo } = resList.info;
+    return (
+      <div className="relative">
+        <span className="absolute top-48 left-4 text-3xl text-green-800 font-bold bg-green-500 p-2 rounded-lg">
+          {costForTwo}
+        </span>
+        <ResCard resList={resList} />
+      </div>
+    );
+  };
+};
+
 export default resCard;
