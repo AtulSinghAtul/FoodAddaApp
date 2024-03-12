@@ -18,7 +18,7 @@ const ResList = () => {
   return resList === null ? (
     <Shimmer />
   ) : (
-    <div className=" mt-8  flex flex-col justify-center items-center ">
+    <div className=" mt-40  flex flex-col justify-center items-center ">
       <h1 className="text-2xl font-bold">{resList[0]?.card?.card?.text}</h1>
       {resList[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.map(
         (card, index) => (
