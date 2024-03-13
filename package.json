@@ -4,8 +4,8 @@
   "description": "This is food app",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build",
-    "watch": "parcel watch",
+    "build": "parcel build index.html",
+    "watch": "parcel watch index.html",
     "test": "jest"
   },
   "repository": {
