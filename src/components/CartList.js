@@ -10,7 +10,7 @@ const CartList = ({ item }) => {
   const { ratings, name, price, description, defaultPrice, imageId } = item;
 
   function handleAdd() {
-    console.log("click");
+    //console.log("click");
     dispatch(addCartData(item));
   }
 

@@ -12,7 +12,7 @@ const Body = () => {
 
   //! custom hook
   useFecthData(RES_DATA_URL);
-  console.log("body render");
+  //console.log("body render");
 
   //! subscribing to the store
   const resData = useSelector((store) => store.app.resData);
@@ -22,7 +22,7 @@ const Body = () => {
 
   //^ handle search input
   function handleSearchRestaurants() {
-    console.log(resData);
+    //console.log(resData);
 
     const resList = resData?.filter((data) => {
       if (data?.info?.name.startsWith(inputText)) {
@@ -33,7 +33,7 @@ const Body = () => {
         }
       }
     });
-    console.log(resList);
+    //console.log(resList);
 
     dispatch(addFilterData(resList));
   }

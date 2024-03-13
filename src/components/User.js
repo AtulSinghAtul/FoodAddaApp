@@ -12,11 +12,11 @@ class User extends React.Component {
     console.log("... Child Component Did Mount ...");
   }
   componentDidUpdate() {
-    console.log("... Child Component Did Update ...");
+    //console.log("... Child Component Did Update ...");
   }
   // debugger;
   render() {
-    console.log("... Child Render ...");
+    //console.log("... Child Render ...");
     const { name, location, avatar_url } = this.props.userData;
 
     return (

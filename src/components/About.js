@@ -4,18 +4,18 @@ import User from "./User";
 class About extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this);
+    // console.log(this);
 
     this.state = {
       userInfo: {
         name: "Dummy Name",
       },
     };
-    console.log("... Parent Constructor ...");
+    //console.log("... Parent Constructor ...");
   }
 
   async componentDidMount() {
-    console.log("... Parent Component Did Mount ...");
+    //console.log("... Parent Component Did Mount ...");
 
     const data = await fetch("https://api.github.com/users/AtulSinghAtul");
 
@@ -31,11 +31,11 @@ class About extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log("... Parent Component Did Update ...");
+    //console.log("... Parent Component Did Update ...");
   }
 
   render() {
-    console.log("... Parent Render ...");
+    //console.log("... Parent Render ...");
     return (
       <div className="text-3xl font-bold mt-48 text-center">
         {}

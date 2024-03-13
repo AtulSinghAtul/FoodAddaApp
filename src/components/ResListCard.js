@@ -3,12 +3,12 @@ import ItemsList from "./ItemsList";
 
 const ResListCard = ({ resListCard, showItems, setShowItems }) => {
   const [toggle, setToggle] = useState(false);
-  console.log(showItems);
+  //console.log(showItems);
 
   const { title, itemCards, categories } = resListCard?.card?.card;
 
   const handleShowItems = () => {
-    console.log("click");
+    //console.log("click");
     setShowItems();
     setToggle(!toggle);
   };

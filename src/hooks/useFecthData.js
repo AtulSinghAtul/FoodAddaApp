@@ -10,7 +10,7 @@ const useFecthData = (RES_DATA_URL) => {
     const data = await fetch(RES_DATA_URL);
 
     const json = await data.json();
-    console.log(json);
+    //console.log(json);
 
     const result =
       json?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle
@@ -23,7 +23,7 @@ const useFecthData = (RES_DATA_URL) => {
 
   useEffect(() => {
     fetchData();
-    console.log("Use Effect Called");
+    //console.log("Use Effect Called");
   }, []);
 };
 
